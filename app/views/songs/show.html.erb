@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @song.title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @song.artist_id %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @song.key %>
+</p>
+
+<p>
+  <strong>High note:</strong>
+  <%= @song.high_note %>
+</p>
+
+<p>
+  <strong>Lyrics:</strong>
+  <%= @song.lyrics %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @song.video %>
+</p>
+
+<p>
+  <strong>Capo:</strong>
+  <%= @song.capo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @song.status %>
+</p>
+
+<p>
+  <strong>Last performed:</strong>
+  <%= @song.last_performed %>
+</p>
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
