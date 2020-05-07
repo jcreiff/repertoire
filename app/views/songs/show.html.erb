@@ -1,49 +1,50 @@
 <p id="notice"><%= notice %></p>
+<div class='container'>
+  <div class = 'row'>
+    <div class = 'col-sm song-grid'>
+      <strong>Title:</strong>
+      <%= @song.title %>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @song.title %>
-</p>
+    <div class = 'col-sm song-grid'>
+      <strong>Artist:</strong>
+      <%= @song.artist.name %>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-sm song-grid'>
+      <strong>Key:</strong>
+      <%= @song.key %>
+    </div>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @song.artist.name %>
-</p>
+    <div class = 'col-sm song-grid'>
+      <strong>Capo:</strong>
+      <%= @song.capo %>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-sm song-grid'>
+      <strong>Status:</strong>
+      <%= @song.status %>
+    </div>
 
-<p>
-  <strong>Key:</strong>
-  <%= @song.key %>
-</p>
-
-<p>
-  <strong>High note:</strong>
-  <%= @song.high_note %>
-</p>
-
-<p>
-  <strong>Lyrics:</strong>
-  <%= @song.lyrics %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @song.video %>
-</p>
-
-<p>
-  <strong>Capo:</strong>
-  <%= @song.capo %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @song.status %>
-</p>
-
-<p>
-  <strong>Last performed:</strong>
-  <%= @song.last_performed %>
-</p>
+    <div class = 'col-sm song-grid'>
+      <strong>Last performed:</strong>
+      <%= @song.last_performed %>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col song-grid'>
+      <strong>Lyrics:</strong>
+      <%= @song.lyrics %>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'iframe-container col song-grid'>
+      <iframe src=<%= @song.video.sub("watch?v=", "embed/") %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+<div>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
