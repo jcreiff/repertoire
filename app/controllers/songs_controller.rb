@@ -14,6 +14,10 @@ class SongsController < ApplicationController
   def status_sort
     @songs = Song.by_status
   end
+
+  def artist_sort
+    @songs = Song.joins(:artist).order("artists.name")
+  end
   # GET /songs/1
   # GET /songs/1.json
   def show

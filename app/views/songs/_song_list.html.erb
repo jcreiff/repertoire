@@ -1,7 +1,7 @@
 <thead>
   <tr>
     <th scope = 'col'><%= link_to "Title", songs_path, remote: true %></th>
-    <th scope = 'col'>Artist</th>
+    <th scope = 'col'><%= link_to "Artist", songs_by_artist_path, remote: true %></th>
     <th scope = 'col'><%= link_to "Status", songs_by_status_path, remote: true %></th>
     <th scope = 'col'><%= link_to "Last Performed", songs_by_date_path, remote: true %></th>
   </tr>
