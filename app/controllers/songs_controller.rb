@@ -4,9 +4,16 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    @songs = Song.by_title
   end
 
+  def date_sort
+    @songs = Song.by_date
+  end
+
+  def status_sort
+    @songs = Song.by_status
+  end
   # GET /songs/1
   # GET /songs/1.json
   def show

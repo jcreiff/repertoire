@@ -1,0 +1,18 @@
+<thead>
+  <tr>
+    <th scope = 'col'><%= link_to "Title", songs_path, remote: true %></th>
+    <th scope = 'col'>Artist</th>
+    <th scope = 'col'><%= link_to "Status", songs_by_status_path, remote: true %></th>
+    <th scope = 'col'><%= link_to "Last Performed", songs_by_date_path, remote: true %></th>
+  </tr>
+</thead>
+<tbody>
+  <% @songs.each do |song| %>
+  <tr>
+    <th scope = 'row'><%= link_to song.title, song %></th>
+    <td><%= song.artist.name %></td>
+    <td><%= song.status %></td>
+    <td><%= song.last_performed %></td>
+  </tr>
+<% end %>
+</tbody>

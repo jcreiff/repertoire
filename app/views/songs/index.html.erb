@@ -2,26 +2,8 @@
 
 <h1>Songs</h1>
 
-<table class='table table-striped'>
-  <thead>
-    <tr>
-      <th scope = 'col'>Title</th>
-      <th scope = 'col'>Artist</th>
-      <th scope = 'col'>Status</th>
-      <th scope = 'col'>Last performed</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <th scope = 'row'><%= link_to song.title, song %></th>
-        <td><%= song.artist.name %></td>
-        <td><%= song.status %></td>
-        <td><%= song.last_performed %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<table class='table table-striped' id='song-list'>
+  <%= render partial: 'song_list' %>
 </table>
 
 <br>
