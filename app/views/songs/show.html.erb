@@ -41,7 +41,7 @@
   </div>
   <div class = 'row'>
     <div class = 'iframe-container col song-grid'>
-      <iframe src=<%= @song.video.sub("watch?v=", "embed/") %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src=<%= @song.embedded_video %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 <div>
